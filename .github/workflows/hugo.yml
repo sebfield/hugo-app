@@ -2,6 +2,12 @@ name: Hugo
 
 on: [push]
 
+env:
+  # Use docker.io for Docker Hub if empty
+  REGISTRY: ghcr.io
+  # github.repository as <account>/<repo>
+  IMAGE_NAME: ${{ github.repository }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,6 +20,3 @@ jobs:
 
     - name: hugo
       uses: klakegg/actions-hugo@1.0.0
-      
-    - name: Docker-Compose Publish
-      uses: pennsignals/publish_docker-compose@v0.1.1
