@@ -1,4 +1,4 @@
-LABEL name:"hugo-app"
+LABEL name="hugo-app"
 
 FROM nginx:alpine as build
 
