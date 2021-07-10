@@ -14,3 +14,6 @@ jobs:
 
     - name: hugo
       uses: klakegg/actions-hugo@1.0.0
+      
+    - name: Docker-Compose Publish
+      uses: pennsignals/publish_docker-compose@v0.1.1
