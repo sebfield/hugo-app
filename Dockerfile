@@ -1,3 +1,5 @@
+LABEL name="hugo-app"
+
 FROM nginx:alpine as build
 
 RUN apk add --update \
